@@ -14,54 +14,6 @@
 // 	},
 // };
 
-// export default {
-//   async fetch(request) {
-
-//     const ua = (request.headers.get("User-Agent") || "").toLowerCase();
-//     const accept = request.headers.get("Accept") || "";
-
-//     const isAI =
-//       ua.includes("gptbot") ||
-//       ua.includes("chatgpt") ||
-//       ua.includes("claude") ||
-//       ua.includes("anthropic") ||
-//       ua.includes("perplexity");
-
-//     // AI / markdown response
-//     if (isAI || accept.includes("text/markdown")) {
-
-//       return new Response(
-// `# AI Version
-
-// This is markdown content served to AI agents.
-
-// - Fast
-// - Lightweight
-// - Markdown optimized
-// `,
-//         {
-//           headers: {
-//             "Content-Type": "text/markdown; charset=utf-8",
-//             "Vary": "Accept, User-Agent",
-//             "Link": '</llms.txt>; rel="service-desc"'
-//           }
-//         }
-//       );
-//     }
-
-//     // Normal browser response
-//     return new Response(
-//       `<h1>Normal Website HTML</h1>`,
-//       {
-//         headers: {
-//           "Content-Type": "text/html"
-//         }
-//       }
-//     );
-//   }
-// };
-
-
 export default {
   async fetch(request) {
 
